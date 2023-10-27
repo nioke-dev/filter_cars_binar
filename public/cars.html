@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <!-- Link For Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+  <!-- Link Cloudflare Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Swiper JS CDN -->
+  <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    /> -->
+
+  <!-- Link Kit Awesome -->
+  <script src="https://kit.fontawesome.com/d2f96135a6.js" crossorigin="anonymous"></script>
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- Link CSS Eksternal -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR SECTION START -->
+  <section id="navbar">
+    <nav class="navbar navbar-expand-lg" style="background-color: #f1f3ff">
+      <div class="container">
+        <a class="navbar-brand" href="#">BCR</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <b>BCR</b>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- NAVIGATION ITEMS -->
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item" style="margin-right: 32px">
+                <a class="nav-link" aria-current="page" href="#our-service">Our Service</a>
+              </li>
+              <li class="nav-item" style="margin-right: 32px">
+                <a class="nav-link" href="#why-us">Why Us</a>
+              </li>
+              <li class="nav-item" style="margin-right: 32px">
+                <a class="nav-link" href="#testimonial-section">Testimonial</a>
+              </li>
+              <li class="nav-item" style="margin-right: 32px">
+                <a class="nav-link" href="#FAQ-Section">FAQ</a>
+              </li>
+            </ul>
+            <!-- NAVIGATION ITEMS -->
+
+            <!-- REGISTER BUTTON -->
+            <form class="d-flex" role="search">
+              <button class="btn btn-forNavbar" type="submit">
+                Register
+              </button>
+            </form>
+            <!-- REGISTER BUTTON -->
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- NAVBAR SECTION END -->
+
+  <!-- Hero Section Start -->
+  <section id="hero-section" class="" style="background-color: #f1f3ff">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 g-4 row-cols-xxl-2 py-5">
+        <div class="col" style="padding-top: 117px; padding-bottom: 30px">          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero Section End -->
+
+
+  <!-- <form id="search-form" method="get">
+  </form> -->
+
+  <section id="search" style="margin-top: -50px; z-index: 9999;">
+    <div class="container mb-5">
+      <form id="search-form" method="get">
+        <div class="row">
+          <div class="col-md-3">
+            <label for="tipeDriver" class="form-label">Tipe Driver</label>
+            <select class="form-select" id="tipeDriver" name="tipeDriver" required>
+              <option selected>Pilih Tipe Driver</option>
+              <option value="Dengan Sopir">Dengan Sopir</option>
+              <option value="Lepas Kunci">Tanpa Sopir (Lepas Kunci)</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="tanggal" class="form-label">Tanggal</label>
+            <input type="date" name="tanggal" class="form-control" id="tanggal" placeholder="Pilih Tanggal" required />
+          </div>
+          <div class="col-md-3">
+            <label for="waktuJemput" class="form-label">Waktu Jemput</label>
+            <select class="form-select" name="waktuJemput" id="waktuJemput" required>
+              <option value="Pilih Waktu">Pilih Waktu</option>
+              <option value="8">08.00 WIB</option>
+              <option value="9">09.00 WIB</option>
+              <option value="10">10.00 WIB</option>
+              <option value="11">11.00 WIB</option>
+              <option value="18">18.00 WIB</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="jumlahpenumpang" class="form-label">Jumlah Penumpang</label>
+            <input type="number" class="form-control" id="jumlahpenumpang" placeholder="Jumlah Penumpang"
+              name="jumlahpenumpang" required />
+          </div>
+          <div class="col-md-1">
+            <div style="margin-top: 38px">
+              <button type="submit" id="submitButton" class="btn btn-success btn-sm">
+                Cari Mobil
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="mb-5">
+    <div class="container">
+      <section class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 g-4 row-cols-xxl-3"
+        id="result">
+
+      </section>
+    </div>
+  </section>
+
+  <!-- Footer Section Start -->
+  <section id="Footer-Section">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-4 row-cols-xxl-4">
+        <div class="col col-order1">
+          <p class="footer-order1">
+            Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000
+          </p>
+          <p class="footer-order2">binarcarrental@gmail.com</p>
+          <p class="footer-order3">081-233-334-808</p>
+        </div>
+        <div class="col col-order-2">
+          <p>Our Service</p>
+          <p>Why Us</p>
+          <p>Testimonial</p>
+          <p>FAQ</p>
+        </div>
+        <div class="col col-order-3">
+          <p>Connect with us</p>
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-regular fa-envelope"></i>
+            <i class="fa-brands fa-twitch"></i>
+          </div>
+        </div>
+        <div class="col col-order-4">
+          <p>Copyright Binar 2022</p>
+          <div style="width: 100px; height: 34px; background: #0d28a6"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section End -->
+  
+  <!-- Bootstrap Link -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"></script>
+  
+  <!-- Swiper JS -->
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+  <!-- jQuery -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
+  <!-- JavaScript -->
+  
+  <!-- <script src="scripts/app.example.js"></script>
+    <script src="scripts/car.example.js"></script>
+    <script src="scripts/binar.js"></script> -->
+    <script src="scripts/main.js"></script>
+  </body>
+
+</html>
